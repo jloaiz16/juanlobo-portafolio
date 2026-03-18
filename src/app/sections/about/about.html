@@ -1,0 +1,52 @@
+<section id="about" #sectionRef class="about" [class.visible]="visible()">
+
+  <div class="section-container">
+
+    <!-- Section label -->
+    <div class="section-header">
+      <span class="label">About Me</span>
+      <h2 class="section-title">
+        A developer with a&nbsp;<span class="accent">cosmic</span>&nbsp;perspective
+      </h2>
+    </div>
+
+    <div class="about-grid">
+
+      <!-- Avatar -->
+      <div class="avatar-col">
+        <div class="avatar-ring">
+          <div class="avatar-inner">
+            <mat-icon class="avatar-icon">person</mat-icon>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copy + skills -->
+      <div class="content-col">
+        <p class="bio">
+          Senior Software Engineer with 8+ years specializing in high-scale enterprise
+          applications and distributed systems. Expert in Angular architecture —
+          Micro-frontends (Module Federation), RxJS, Signals, and NgRx — building
+          resilient, performance-driven interfaces.
+        </p>
+        <p class="bio">
+          Proficient in the ReactJS ecosystem and backed by a strong full-stack
+          foundation in Java (Spring Boot), Python (Django), and Node.js. AI
+          pioneer in development workflows, integrating Generative AI to optimize
+          delivery speed and developer productivity.
+        </p>
+
+        <div class="skills-block">
+          <h3 class="skills-heading">Tech Stack</h3>
+          <div class="chips">
+            @for (skill of skills; track skill) {
+              <span class="chip">{{ skill }}</span>
+            }
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>

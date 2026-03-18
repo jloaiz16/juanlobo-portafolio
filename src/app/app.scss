@@ -1,0 +1,40 @@
+:host {
+  display: block;
+}
+
+// ─── Fixed cosmic background layers ────────────────────────────────────────
+
+.cosmic-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(ellipse at 30% 20%, #0d0030 0%, transparent 55%),
+    radial-gradient(ellipse at 70% 80%, #0a001a 0%, transparent 50%),
+    #030010;
+}
+
+// Red/magenta nebula — fades in during About, peaks mid-scroll, fades for Experience
+.nebula-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 75% 35%, rgba(180, 20, 5, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 58%, rgba(130, 10, 80, 0.3) 0%, transparent 46%),
+    radial-gradient(ellipse at 55% 72%, rgba(200, 35, 10, 0.25) 0%, transparent 42%),
+    radial-gradient(ellipse at 8%  14%, rgba(80,  5, 120, 0.22) 0%, transparent 40%);
+  // Visible roughly between 20 %–80 % scroll progress
+  opacity: calc(
+    clamp(0, (var(--scroll-progress, 0) - 0.15) * 5, 1) *
+    clamp(0, (0.85 - var(--scroll-progress, 0)) * 5, 1)
+  );
+}
+
+// ─── Scroll container ───────────────────────────────────────────────────────
+
+.content-layer {
+  position: relative;
+  z-index: 1;
+}

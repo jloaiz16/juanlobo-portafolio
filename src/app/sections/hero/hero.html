@@ -1,0 +1,58 @@
+<section class="hero" id="hero">
+
+  <!-- Crescent moon (CSS trick from the reference image) -->
+  <div class="moon" aria-hidden="true"></div>
+
+  <!-- Hero copy -->
+  <div class="hero-content">
+    <p class="eyebrow">Hello, world — I'm</p>
+    <h1 class="name">Juan David<br>Loaiza</h1>
+    <p class="title">Senior Software Engineer &amp; Frontend Architect</p>
+    <p class="tagline">8+ years building enterprise Angular applications &amp; distributed systems</p>
+
+    <div class="actions">
+      <button mat-flat-button class="btn-primary" (click)="scrollTo('experience')">
+        View My Work
+      </button>
+      <button mat-stroked-button class="btn-secondary" (click)="scrollTo('about')">
+        About Me
+      </button>
+    </div>
+  </div>
+
+  <!-- Mountain silhouette (matches reference image) -->
+  <div class="mountains" aria-hidden="true">
+    <svg
+      viewBox="0 0 1440 220"
+      preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <!-- Far ridge — darkest -->
+      <path
+        d="M0,220 L0,160 L80,118 L160,142 L240,88 L320,112 L400,62 L480,94
+           L560,42 L624,68 L680,28 L760,56 L840,16 L920,46 L1000,10
+           L1080,40 L1160,20 L1240,54 L1320,30 L1440,58 L1440,220 Z"
+        fill="#000000"
+      />
+      <!-- Near ridge — slightly lighter for depth -->
+      <path
+        d="M0,220 L0,178 L100,152 L200,168 L300,128 L380,150 L460,112
+           L544,136 L640,102 L720,126 L820,90 L904,114 L1000,80
+           L1084,102 L1180,72 L1280,98 L1380,74 L1440,88 L1440,220 Z"
+        fill="#06000f"
+        opacity="0.85"
+      />
+    </svg>
+  </div>
+
+  <!-- Scroll prompt -->
+  <button
+    class="scroll-cue"
+    aria-label="Scroll to about section"
+    (click)="scrollTo('about')"
+  >
+    <span class="scroll-label">Scroll</span>
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
+
+</section>
